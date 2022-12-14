@@ -1,0 +1,13 @@
+{
+  "name": "ISocialApi",
+  "version": "0.0.0",
+  "description": "ISocialApi is a Node API built in Microservices Structure and Clean Architecture, this API is part of the ISocial social network project",
+  "main": "index.js",
+  "repository": "https://github.com/jorgeluiz1586/ISocialApi.git",
+  "author": "Jorge Luiz <jorgeluiz1586@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "run:development": "bash ./scripts/run-development.sh"
+  }
+}

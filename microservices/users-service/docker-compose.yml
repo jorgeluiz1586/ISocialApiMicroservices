@@ -1,0 +1,53 @@
+version: '3.9'
+
+services:
+  isocial_users_service_api_dev:
+    container_name: isocial_users_service_api_dev
+    image: isocial-users-service-api-dev:1.0.0
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    env_file:
+      - ./.env
+    restart: unless-stopped
+    working_dir: /usr/src/app
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    command: >
+      bash -c "
+        yarn
+        yarn dev
+      "
+    networks:
+      - isocial-network
+    
+
+  isocial_users_service_api_prod:
+    container_name: isocial_users_service_api_prod
+    image: isocial-users-service-api-prod:1.0.0
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    env_file:
+      - ./.env
+    restart: unless-stopped
+    working_dir: /usr/src/app
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    command: >
+      bash -c "
+        yarn
+        yarn server
+      "
+    networks:
+      - isocial-network
+
+networks:
+  isocial-network:
+    external: true

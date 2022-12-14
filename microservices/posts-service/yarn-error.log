@@ -1,0 +1,48 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/jorgeluiz1586/.dotnet/tools:/home/jorgeluiz1586/Android/Sdk/emulator:/home/jorgeluiz1586/Android/Sdk/tools:/home/jorgeluiz1586/Android/Sdk/tools/bin:/home/jorgeluiz1586/Android/Sdk/platform-tools:/home/jorgeluiz1586/development/flutter/bin:/home/jorgeluiz1586/Android/Sdk/emulator:/home/jorgeluiz1586/Android/Sdk/tools:/home/jorgeluiz1586/Android/Sdk/tools/bin:/home/jorgeluiz1586/Android/Sdk/platform-tools:/home/jorgeluiz1586/development/flutter/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.18.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/jorgeluiz1586/Documentos/Trabalho/Pessoal/MyPortfolio/Public/ISocialApi/ApiGateway/package.json: Unexpected token } in JSON at position 294
+      at JSON.parse (<anonymous>)
+      at /usr/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "ApiGateway",
+    "version": "0.0.0",
+    "description": "This API is the API Gateway of ISocial Microservice API Structure",
+    "main": "index.js",
+    "author": "Jorge Luiz <jorgeluiz1586@gmail.com>",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+      "express": "4.18.1",
+    },
+    "devDependencies": {
+      "@types/express": "^4.17.14",
+      "@types/nodemon": "1.19.1",
+      "ts-node": "10.8.0",
+      "typescript": "^4.9.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
